@@ -1,1 +1,17 @@
-# alms
+# Metaheuristic-Guided Active learning for Optimizing Reaction Conditions of High-Performance Nonoxidative Methane Conversion
+Converting methane into value-added compounds is of great interest due to its abundance in natural and biomass gases. However, since the conventional engineering process of methane conversion inevitably produces CO<sup>2</sup>, one of the greenhouse gases, an efficient methane conversion method with low CO$_2$ emission is mandatory for green manufacturing systems. However, a data-driven and automated optimization of the reaction conditions for high-performance nonoxidative direct conversion of methane remains a challenging problem because we should conduct expensive chemical experiments to collect prior data or knowledge for the optimization. To avoid the expensive costs of chemical experiments, we propose a method to perform active learning without pre-defined unlabeled constructed by expensive chemical experiments. To this end, we combine the active learning method with the metaheuristic algorithms to perform active learning with statistically augmented data. We applied the proposed method to a high-throughput screening task to discover new reaction conditions of high-performance nonoxidative methane, and the high-throughput screening error was significantly reduced by 69.11%.
+
+Reference: https://doi.org/10.1038/s41524-022-00897-2
+
+# Run
+This repository provides an implementation of transfer learning based on System-Identified Material Representation (SIMD). By executing ``exec.py``, you can train and evaluate the ``XGBoost regressor`` with SIMD to predict ZTs of thermoelectric materials from unexplored material groups.
+
+# Datasets
+To reproduce the extrapolation results of SIMD, we should prepare the following two datasets of thermoelectric materials.
+- **Starry dataset:** It is a large materials dataset containing thermoelectric materials. Since it was collected by text mining, data pre-processing should be conducted to remove invalid data (reference: https://www.starrydata2.org).
+- **ESTM dataset:** It is a refined thermoelectric materials dataset for machine learning. ESTM dataset contains 5,205 experimental observations of thermoelectric materials and their properties (reference: https://doi.org/10.xxxx/xxxxxxxxx).
+
+# Notes
+- This repository contains only a subset of the source Starry dataset due to the dataset license. Please visit [Starrydata](https://www.starrydata2.org) to download the full data of the source Starry dataset.
+- The full data of the ESTM dataset is provided in the ``dataset folder`` of this repository.
+- The ``results folder`` provides the extrapolation results on the full data of the Starry and ESTM dataset. You can check the extrapolation results reported in the paper.
