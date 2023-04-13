@@ -4,7 +4,7 @@ Converting methane into value-added compounds is of great interest due to its ab
 Reference: Not available
 
 # Run
-This repository provides an implementation of transfer learning based on System-Identified Material Representation (SIMD). By executing ``exec.py``, you can train and evaluate the ``XGBoost regressor`` with SIMD to predict ZTs of thermoelectric materials from unexplored material groups.
+This repository provides an implementation of active learning with metaheuristic search (ALMS) to construct a prediction model that predicts the C<sub>2</sub> yields of the input reaction conditions. You can construct a predictiono model based on ALMS by executing ``exec_alms.py``.
 
 # Datasets
 To reproduce the extrapolation results of SIMD, we should prepare the following two datasets of thermoelectric materials.
